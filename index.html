@@ -3,20 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema de Mensajería</title>
+    <title>Sistema de Mensajería | Inicio</title>
+    
+    <!-- Importar fuente de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    
     <style>
-        body { font-family: Arial, sans-serif; margin: 40px; text-align: center; }
-        .btn { padding: 10px 20px; background-color: #0056b3; color: white; text-decoration: none; border-radius: 5px; }
-        .btn:hover { background-color: #004494; }
+        /* Variables de color para mantener consistencia */
+        :root {
+            --primary-color: #4F46E5; /* Índigo moderno */
+            --primary-hover: #4338CA;
+            --text-main: #1F2937;
+            --text-muted: #4B5563;
+            --bg-gradient: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+        }
+
+        body { 
+            font-family: 'Inter', system-ui, -apple-system, sans-serif; 
+            margin: 0; 
+            padding: 0;
+            background: var(--bg-gradient);
+            color: var(--text-main);
+            /* Flexbox para centrar todo en la pantalla */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .hero-card {
+            background-color: #ffffff;
+            max-width: 550px;
+            width: 90%;
+            padding: 50px 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+
+        .icon-container {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-weight: 800;
+            font-size: 2.2rem;
+            margin-top: 0;
+            margin-bottom: 16px;
+            color: #111827;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: var(--text-muted);
+            margin-bottom: 35px;
+        }
+
+        .btn { 
+            display: inline-block;
+            padding: 14px 28px; 
+            background-color: var(--primary-color); 
+            color: white; 
+            text-decoration: none; 
+            font-weight: 600;
+            font-size: 1rem;
+            border-radius: 8px; 
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(79, 70, 229, 0.25);
+        }
+
+        .btn:hover { 
+            background-color: var(--primary-hover); 
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(79, 70, 229, 0.35);
+        }
     </style>
 </head>
 <body>
 
-    <h1>Bienvenido a nuestro Sistema de Mensajería</h1>
-    <p>Conectando personas de manera rápida y segura. Si estás experimentando algún problema con nuestro servicio, nuestro equipo de soporte está listo para ayudarte.</p>
-    
-    <br>
-    <a href="soporte.html" class="btn">Ir al Formulario de Soporte</a>
+    <div class="hero-card">
+        <div class="icon-container">💬</div>
+        <h1>Sistema de Mensajería</h1>
+        <p>Conectando personas de manera rápida y segura. Si estás experimentando algún problema con nuestro servicio, nuestro equipo de soporte está listo para ayudarte de inmediato.</p>
+        
+        <a href="soporte.html" class="btn">Ir al Formulario de Soporte</a>
+    </div>
 
 </body>
 </html>
