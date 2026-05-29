@@ -5,28 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema de Mensajería | Inicio</title>
     
-    <!-- Importar fuente de Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     
     <style>
-        /* Variables de color para mantener consistencia */
         :root {
-            --primary-color: #4F46E5; /* Índigo moderno */
+            --primary-color: #4F46E5; 
             --primary-hover: #4338CA;
             --text-main: #1F2937;
             --text-muted: #4B5563;
-            --bg-gradient: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
         }
 
         body { 
             font-family: 'Inter', system-ui, -apple-system, sans-serif; 
             margin: 0; 
             padding: 0;
-            background: var(--bg-gradient);
+            
+            /* 1. Imagen de fondo con capa oscura superpuesta para no perder contraste */
+            /* REEMPLAZA la URL de abajo por la ruta local de tu imagen, ej: url('images/fondo-motos-carros.jpg') */
+            background-image: 
+                linear-gradient(rgba(15, 23, 42, 0.65), rgba(15, 23, 42, 0.75)), 
+                url('https://images.unsplash.com/photo-1617503752587-97d2103a96ea?q=80&w=1920&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+
             color: var(--text-main);
-            /* Flexbox para centrar todo en la pantalla */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -34,18 +40,24 @@
         }
 
         .hero-card {
-            background-color: #ffffff;
+            /* 2. Efecto Glassmorphism (Cristal) */
+            background-color: rgba(255, 255, 255, 0.85); /* Fondo blanco semi-transparente */
+            backdrop-filter: blur(12px); /* Desenfoca el fondo detrás de la tarjeta */
+            -webkit-backdrop-filter: blur(12px); /* Soporte para Safari */
+            
             max-width: 550px;
             width: 90%;
             padding: 50px 40px;
-            border-radius: 16px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            border-radius: 20px; /* Bordes un poco más redondeados */
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); /* Sombra más profunda */
             text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.3); /* Borde sutil brillante */
         }
 
         .icon-container {
-            font-size: 3rem;
+            font-size: 3.5rem; /* Icono un poco más grande */
             margin-bottom: 20px;
+            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
         }
 
         h1 {
@@ -54,6 +66,7 @@
             margin-top: 0;
             margin-bottom: 16px;
             color: #111827;
+            letter-spacing: -0.025em; /* Ajuste tipográfico moderno */
         }
 
         p {
@@ -65,33 +78,35 @@
 
         .btn { 
             display: inline-block;
-            padding: 14px 28px; 
+            padding: 14px 32px; 
             background-color: var(--primary-color); 
             color: white; 
             text-decoration: none; 
             font-weight: 600;
-            font-size: 1rem;
-            border-radius: 8px; 
+            font-size: 1.05rem;
+            border-radius: 10px; 
             transition: all 0.3s ease;
-            box-shadow: 0 4px 6px rgba(79, 70, 229, 0.25);
+            box-shadow: 0 4px 15px rgba(79, 70, 229, 0.4);
         }
 
         .btn:hover { 
             background-color: var(--primary-hover); 
-            transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(79, 70, 229, 0.35);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(79, 70, 229, 0.5);
         }
     </style>
 </head>
 <body>
 
     <div class="hero-card">
-        <div class="icon-container">💬</div>
-        <h1>Sistema de Mensajería</h1>
+        <div class="icon-container">📦</div> <h1>Sistema de Mensajería</h1>
         <p>Conectando personas de manera rápida y segura. Si estás experimentando algún problema con nuestro servicio, nuestro equipo de soporte está listo para ayudarte de inmediato.</p>
         
         <a href="soporte.html" class="btn">Ir al Formulario de Soporte</a>
     </div>
+
+</body>
+</html>
 
 </body>
 </html>
